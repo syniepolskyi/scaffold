@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.svg?v=" type="image/svg+xml">
+  <link rel="stylesheet" href="../common/fonts.css?v=">
+  <link rel="stylesheet" href="scaffold.css?v=">
+  <title>FILE SCAFFOLD</title>
+</head>
+<body>
+  <form method="POST" 
+        enctype="multipart/form-data"
+        action="scaffold.php"
+        id="file_scaffold_form">
+    <div class="scaffold-form-container">
+      <div class="scaffold-form-part">
+        <div class="scaffold-form-section">
+          <div class="scaffold-label-container">
+            <a href="#" id="scaffold_read">[read]</a>
+            <label for="scaffold_filename">File name</label>
+          </div>
+          <input type="text" name="scaffold_filename" id="scaffold_filename">
+        </div>
+        <div class="scaffold-form-section">
+          <div class="scaffold-label-container">
+            <a href="#" id="scaffold_scan">[scan]</a>
+            <label for="scaffold_dir">Destination directory</label>
+          </div>
+          <input type="text" name="scaffold_dir" id="scaffold_dir" value="/">
+          <div id="scaffold_dir_up"></div>
+          <ol id="scaffold_dir_items"></ol>
+          <div id="scaffold_dir_items_msg"></div>
+        </div>
+      </div>
+      <div class="scaffold-form-part">
+        <div class="scaffold-form-section">
+          <div class="scaffold-label-container">
+            <a href="#" id="scaffold_save">[save]</a>
+            <label for="scaffold_text">File content</label>
+          </div>
+          <textarea name="scaffold_text" 
+            id="scaffold_text" 
+            spellcheck="false"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="scaffold-form-section">
+      <label for="scaffold_file">[File]</label>
+      <input type="file" name="scaffold_file" id="scaffold_file">
+      <input type="submit" name="scaffold_submit" 
+        id="scaffold_submit" 
+        value="submit">
+      <button type="button" 
+            style="display: none;"
+            id="confirmed_submit">
+        Confirm and submit
+      </button>
+      <span id="scaffold_status"></span>
+    </div>
+  </form>
+  
+  <script src="scaffold.js?v="></script>
+  <script src="../common/force-nocache.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+:root {
+  color-scheme: dark;
+  --bg-color: #1a1614;
+  --surface-color: #26211e;
+  --text-main: #e8e1d9;
+  --text-muted: #a0958b;
+  --accent: #d4a373;
+  --accent-hover: #bc8a5f;
+  --link-color: #9ab3f5;
+  --input-bg: #2d2723;
+  --input-border: #423a34;
+  --input-focus: #d4a373;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+input, textarea {
+  font-family: 'Iosevka';
+}
+
+input[type="text"], 
+input[type="number"], 
+input[type="email"], 
+textarea {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-main);
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, 
+textarea:focus {
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.2);
+}
+
+input::placeholder, 
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+button, input[type="submit"] {
+  background-color: var(--accent);
+  color: var(--bg-color);
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+.scaffold-form-section:not(:first-child)
+{
+  margin-top: 1em;
+}
+
+input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+textarea#scaffold_text {
+  width: 100%;
+  height: 30em;
+}
+
+@media screen and (min-width: 55em) {
+  textarea#scaffold_text {
+    width: 48em;
+  }
+  .scaffold-form-container {
+    display: flex;
+    gap: 1em;
+  }
+}
+
