@@ -1,3 +1,3 @@
 <?php
 
-header("Location: https://scaffolding.gt.tc/scaffold/index.html");
+header("Location: https://scaffold-0bc109f982cc.herokuapp.com/scaffold/index.html");
