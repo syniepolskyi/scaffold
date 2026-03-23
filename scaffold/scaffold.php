@@ -13,7 +13,7 @@ if(empty($idata))
     . "_FILES allowed params: scaffold_file; "
     . ""]);
 }
-$basedir = "/home/vol13_3/infinityfree.com/if0_41206967/htdocs/";
+$basedir = "/app";
 $output = [];
 
 if(!is_dir($basedir . $idata["scaffold_dir"]))
